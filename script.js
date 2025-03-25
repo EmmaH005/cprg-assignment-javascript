@@ -1,18 +1,20 @@
 
+console.log("JavaScript file is loaded and running!");
 
+function fetchJoke (){
+fetch ('https://v2.jokeapi.dev/joke/Any?safe-mode')
+.then (response => response.json())
+.then (jokeData =>{
+    const jokeContainer = document.getElementById('joke-container');
 
-function getjoke() {
-fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
-.then(response => response.json())
-.then(data => {
-    const setup=data.setup;
-    const delivery=data.delivery;
-
-    document.getElementById('setup').textContent = setup;
-    document.getElementById('delivery').textContent = delivery;
- })
-
+    if(jokeData.type === 'single') {
+        jokeContainer.innerText = jokeData.joke;
+    } else if (jokeData.type ==='twopart'){
+        jokeContainer.innerHTML = 
+        `<p class="setup">${jokeData.setup}</p>` +
+        `<p>...</p>` + 
+        `<p class="delivery">${jokeData.delivery}</p>`;
+    }
+    })
 }
-
-
-window.onload = getJoke;
+fetchJoke();
