@@ -14,7 +14,11 @@ fetch ('https://v2.jokeapi.dev/joke/Any?safe-mode')
         `<p class="setup">${jokeData.setup} ... ${jokeData.delivery}</p>`;
        
        
+
+
     }
     })
 }
 fetchJoke();
+
+
