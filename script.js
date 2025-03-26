@@ -11,9 +11,9 @@ fetch ('https://v2.jokeapi.dev/joke/Any?safe-mode')
         jokeContainer.innerText = jokeData.joke;
     } else if (jokeData.type ==='twopart'){
         jokeContainer.innerHTML = 
-        `<p class="setup">${jokeData.setup}</p>` +
-        `<p>...</p>` + 
-        `<p class="delivery">${jokeData.delivery}</p>`;
+        `<p class="setup">${jokeData.setup} ... ${jokeData.delivery}</p>`;
+       
+       
     }
     })
 }
