@@ -23,3 +23,23 @@ fetchJoke('Any');
 
 
 
+
+document.querySelector("#programmingBtn").addEventListener("click", function() {
+    fetchJoke('Programming');
+});
+
+document.querySelector("#punBtn").addEventListener("click", function() {
+    fetchJoke('Pun');
+});
+
+document.querySelector("#spookyBtn").addEventListener("click", function() {
+    fetchJoke('Spooky');
+});
+
+document.querySelector("#christmasBtn").addEventListener("click", function() {
+    fetchJoke('Christmas');
+});
+
+document.querySelector("#miscBtn").addEventListener("click", function() {
+    fetchJoke('Misc');
+});
