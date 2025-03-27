@@ -1,6 +1,6 @@
 
 
-async function fetchJoke(category) {
+async function fetchJoke(category) { //Note for future use: async allows javascript to handle multiple functions at once without slowing down the whole page//
     const apiUrl = `https://v2.jokeapi.dev/joke/${category}?safe-mode`;
 
     const response = await fetch(apiUrl); 
@@ -15,7 +15,7 @@ async function fetchJoke(category) {
     }
 }
 
-// 
+//Note: Allows the webpage to generate a random "Joke Of The Day"//
 fetchJoke('Any');
 
 
@@ -39,27 +39,8 @@ document.getElementById("miscBtn").addEventListener("click", function() {
     fetchJoke('Misc');
 });
 
-fetchJoke('Any');
 
 
 
 
-document.querySelector("#programmingBtn").addEventListener("click", function() {
-    fetchJoke('Programming');
-});
 
-document.querySelector("#punBtn").addEventListener("click", function() {
-    fetchJoke('Pun');
-});
-
-document.querySelector("#spookyBtn").addEventListener("click", function() {
-    fetchJoke('Spooky');
-});
-
-document.querySelector("#christmasBtn").addEventListener("click", function() {
-    fetchJoke('Christmas');
-});
-
-document.querySelector("#miscBtn").addEventListener("click", function() {
-    fetchJoke('Misc');
-});
