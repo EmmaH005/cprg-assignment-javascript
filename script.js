@@ -1,24 +1,25 @@
 
-console.log("JavaScript file is loaded and running!");
 
-function fetchJoke (){
-fetch ('https://v2.jokeapi.dev/joke/Any?safe-mode')
-.then (response => response.json())
-.then (jokeData =>{
-    const jokeContainer = document.getElementById('joke-container');
+async function fetchJoke(category) {
+    const apiUrl = `https://v2.jokeapi.dev/joke/${category}?safe-mode`;
 
-    if(jokeData.type === 'single') {
-        jokeContainer.innerText = jokeData.joke;
-    } else if (jokeData.type ==='twopart'){
-        jokeContainer.innerHTML = 
-        `<p class="setup">${jokeData.setup} ... ${jokeData.delivery}</p>`;
-       
-       
+   
+    const response = await fetch(apiUrl);
+    const data = await response.json();
 
+    const jokeContainer = document.getElementById('joke');
 
+   
+    if (data.type === "single") {
+        jokeContainer.innerText = data.joke;
+    } else if (data.type === "twopart") {
+        jokeContainer.innerText = `${data.setup} ... ${data.delivery}`;
+    } else {
+        jokeContainer.innerText = "Couldn't fetch a joke. Try again!";
     }
-    })
 }
-fetchJoke();
+
+fetchJoke('Any');
+
 
 
