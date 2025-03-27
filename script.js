@@ -1,7 +1,7 @@
 
 
 async function fetchJoke(category) { //Note for future use: async allows javascript to handle multiple functions at once without slowing down the whole page//
-    const apiUrl = `https://v2.jokeapi.dev/joke/${category}?safe-mode`;
+    const apiUrl = `https://v2.jokeapi.dev/joke/${category}?safe-mode`; //In order to call upon whatever category I need, insert template literal//
 
     const response = await fetch(apiUrl); 
     const data = await response.json();  
