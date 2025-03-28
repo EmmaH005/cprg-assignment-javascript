@@ -8,3 +8,5 @@ References:
 4- SuperSimpleDev. (2024, May 9). JavaScript Tutorial full course - Beginner to Pro [Video]. YouTube. https://www.youtube.com/watch?v=EerdGm-ehJQ
 
 5- W3Schools.com. (n.d.). https://www.w3schools.com/js/js_string_templates.asp
+
+6- Tgolebie. (2023, October 2). getElementById vs querySelector - Tgolebie - Medium. Medium. https://medium.com/@tgolebie16/getelementbyid-vs-queryselector-b164acba1421#:~:text=They%20both%20retrieve%20elements%20from,then%20you%20should%20use%20querySelector.
