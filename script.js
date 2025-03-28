@@ -21,7 +21,7 @@ fetchJoke('Any');
 
 
     
-const h1 = document.querySelector ("h1");
+const h1 = document.querySelector ("h1"); //Note: query selector = retrieving a class or tag from html//
 
 
 document.getElementById("programmingBtn").addEventListener("click", function() {
