@@ -19,24 +19,34 @@ async function fetchJoke(category) { //Note for future use: async allows javascr
 fetchJoke('Any');
 
 
+
+    
+const h1 = document.querySelector ("h1");
+
+
 document.getElementById("programmingBtn").addEventListener("click", function() {
     fetchJoke('Programming');
+    h1.textContent = "Programming Joke"
 });
 
 document.getElementById("punBtn").addEventListener("click", function() {
     fetchJoke('Pun');
+    h1.textContent = "Random Pun"
 });
 
 document.getElementById("spookyBtn").addEventListener("click", function() {
     fetchJoke('Spooky');
+    h1.textContent = "Spooky Joke"
 });
 
 document.getElementById("christmasBtn").addEventListener("click", function() {
     fetchJoke('Christmas');
+    h1.textContent = "Christmas Joke"
 });
 
 document.getElementById("miscBtn").addEventListener("click", function() {
     fetchJoke('Misc');
+    h1.textContent = "Misc Joke"
 });
 
 
