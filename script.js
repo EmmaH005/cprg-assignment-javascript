@@ -7,11 +7,14 @@ async function fetchJoke(category) { //Note for future use: async allows javascr
     const data = await response.json();  
     const jokeContainer = document.getElementById('joke');
 
+    const h1 = document.querySelector ("h1");
     
     if (data.type === "single") {
         jokeContainer.innerText = data.joke;
+        h1.textContent ="Single-Part"
     } else if (data.type === "twopart") {
         jokeContainer.innerText = data.setup + " ... " + data.delivery; 
+        h1.textContent="Two-Part"
     }
 }
 
@@ -21,32 +24,32 @@ fetchJoke('Any');
 
 
     
-const h1 = document.querySelector ("h1"); //Note: query selector = retrieving a class or tag from html//
+const h2 = document.querySelector ("h2"); //Note: query selector = retrieving a class or tag from html//
 
 
 document.getElementById("programmingBtn").addEventListener("click", function() {
     fetchJoke('Programming');
-    h1.textContent = "Programming Joke"
+    h2.textContent = "Programming Joke"
 });
 
 document.getElementById("punBtn").addEventListener("click", function() {
     fetchJoke('Pun');
-    h1.textContent = "Random Pun"
+    h2.textContent = "Random Pun"
 });
 
 document.getElementById("spookyBtn").addEventListener("click", function() {
     fetchJoke('Spooky');
-    h1.textContent = "Spooky Joke"
+    h2.textContent = "Spooky Joke"
 });
 
 document.getElementById("christmasBtn").addEventListener("click", function() {
     fetchJoke('Christmas');
-    h1.textContent = "Christmas Joke"
+    h2.textContent = "Christmas Joke"
 });
 
 document.getElementById("miscBtn").addEventListener("click", function() {
     fetchJoke('Misc');
-    h1.textContent = "Misc Joke"
+    h2.textContent = "Misc Joke"
 });
 
 
