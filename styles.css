@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+
+
+#joke {
+   text-align: center;
+   color: beige;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+p {
+    text-align:center ;
+}
+
+h1{
+    text-align:center;
+    margin-top: 20%;
+    color: lightblue;
+}
+
+button {
+    background-color: lightblue;
+    border-radius: 20px;
+    border: 1px solid cyan;
+    padding: 1%;
+}
